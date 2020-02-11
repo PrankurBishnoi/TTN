@@ -1,0 +1,140 @@
+.form-header{
+
+	
+	
+	
+	border-bottom:1px solid #1abc9c;
+	
+	justify-content: space-between;
+	padding:15px 5%;
+	color:#1abc9c;
+
+
+}
+.ttn{
+	color:#1abc9c;
+	display:inline-block;
+	
+	font-size: 1.3em;
+
+}
+.nav_bar a{
+	display: inline-block;
+	color:#1abc9c;
+	text-decoration: none;
+	font-size: 1.3em;
+	margin-right: 20px;
+}
+.nav_bar {
+
+	display:block;
+	float:right;
+	
+
+
+}
+.form-container{
+
+
+	
+	box-sizing: border-box;
+	width:40%;
+	border:1px solid #bcc3ca;
+	border-radius:8px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.formsec-header{
+	background-color: #bcc3ca;
+	padding:20px;
+	font-size:1.2em;
+	color:#fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+
+}
+.form-body{
+
+	padding:20px;
+}
+.form-footer{
+
+	background:#edeff1;
+	padding:20px;
+	font-size:1.2em;
+
+	
+}
+input{
+
+	width: 92%;
+	margin-top:4px;
+}
+input.version{
+	width:30%;
+	height: 35px;
+	border:1px solid #cdcdcd;
+	border-radius: 5px;
+}
+input.title{
+	width: 92%;
+	border:1px solid #1abc9c;;
+	border-radius: 5px;
+}
+textarea{
+	width:92%;
+	resize:vertical;
+	border-radius: 5px;
+	margin-top:4px;
+}
+select{
+	width:92%;
+	height:25px;
+	margin-top:4px;
+	border-radius: 5px;
+	background-color: #1abc9c; 
+	color: white;
+	
+}
+input[type="radio"]{
+	width:inherit;
+}
+
+input[type="radio"]:nth-child(2){
+	margin-left:30%;
+}
+
+button{
+	position: relative;
+	left:80%;
+	background:#1abc9c;
+	padding:7px 10px;
+	color:#fff;
+	font-size:1.2em;
+	border:none;
+	border-radius:5px;
+}
+button:hover{
+	cursor: pointer;
+}
+input[type="file"]{
+	width:92%;
+	border:1px solid #cdcdcd;
+	border-radius:5px;
+}
+
+input[type="file"]{
+	-webkit-appearance: none;
+	text-align: left;
+	height: 25px;
+	-webkit-rtl-ordering:  left;
+ }
+ input[type="file"]::-webkit-file-upload-button{
+	-webkit-appearance: none;
+	float: right;
+	height: 25px;
+	margin: 0 0 0 10px;
+	border: 1px solid #aaaaaa;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#d2d0d0), to(#f0f0f0));
+	background-image: -moz-linear-gradient(90deg, #d2d0d0 0%, #f0f0f0 100%);
+ }

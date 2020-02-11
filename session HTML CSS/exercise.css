@@ -1,0 +1,151 @@
+body{
+
+	margin-left:25px;
+	border-left: 1px solid grey;
+	border-right: 1px solid grey;
+	margin-right:25px;
+	background-color:#282828;
+	
+}
+* {
+  box-sizing: border-box;
+}
+
+header{
+
+	margin-left:135px;
+	margin-right:135px;
+	
+	font-size: 40px;
+	color:#A9A9A9;
+	
+	
+}
+#nav-container{
+	display:flex;
+	
+	
+	margin-left:135px;
+	margin-right:135px;
+	background-color:#080808;
+}
+.main-container{
+
+	margin-top:10px;
+	
+	border: 1px solid grey;
+	background-color: white;
+	//margin-bottom: 70px;
+
+
+
+}
+#container1{
+
+	margin-left:135px;
+	height:360px;
+	margin-right:135px;
+	background-color:#080808;
+	
+	margin-top: 20px;
+
+}
+#container2{
+
+	
+	margin-left:135px;
+	margin-right:135px;
+	
+	background-color:#C3C3C3;
+	
+	margin-top: 20px;
+	line-height: 1.6em;
+	color:black;
+	justify-content: center;
+
+}
+p{
+
+	
+
+}
+#container3
+{
+	margin-left:135px;
+	margin-right:135px;
+	display:flex;
+	
+	margin-top: 20px;
+	background-color:white;
+	
+	 justify-content: space-between;
+	 margin-bottom: 40px;
+
+}
+a {
+	display:inline-block;
+	margin-left: 3px;
+
+  color: #A9A9A9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.sub-container3{
+	position:relative;
+	width:215px;
+	height:315px;
+		background-color:#282828;
+		margin: 10px;
+
+}
+footer{
+	height: 50px;
+	padding: 15px;
+	color:grey;
+	background-color:#080808;
+
+	
+	
+}
+#fleft{
+	
+	float:left;
+
+}
+#fright{
+	float:right;
+}
+@media screen and (max-width: 700px) {
+   #nav-container {   
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+   #container3 {   
+    flex-direction: column;
+    margin:auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+   .sub-container3 {   
+   
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.i{
+width: 100%;
+   position: absolute;
+   background-color: #d3d3d3;
+   top: 98%;
+   padding-left: 30px;
+
+}
+.cont2-0{
+margin-left:135px;
+margin-right:135px;
+color:grey;
+}
