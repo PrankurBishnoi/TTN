@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Firstjs.js"></script>
+<style>
+    #a1{
+        display: none;
+    }
+
+		
+		table,tr,td,th{
+			
+			border-collapse: collapse;
+		}
+		table{
+			width:100%;
+		}
+		th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th{
+	 background-color: #4CAF50;
+  color: white;
+
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+	</style>
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+    <h3>Q1.Prompt for amount, interest rate and no. of years and calculate simple interest.</h3><br>
+    <button onclick="calInterest()">Try Me!</button><br><br>
+   <div id="a1"> 
+       <label>Amount:</label><br><input type="number" id="amount"><br>
+    <label>Interest:</label><br><input type="number" id="interest"><br>
+    <label>Time :</label><br><input type="number" id="years"><br>
+    <h2 id="ans1"><h2>
+       
+    </div><br>
+    <hr>
+    <br><br>
+    <h3>Q2. is palindrome string</h3><br><br>
+  <!--<button onclick="calinterest()">click me</button>-->
+    <label>Enter the String To check if its Palindrome or not :</label> <input type="text" id="palindrome">
+    <button onclick="checkPalindrome()">Check</button>
+    <p id="respal"></p><br>
+    <hr>
+    <br>
+    <h3>Q3.Area Of Circle.</h3><br><br>
+    <label>Enter the area of circle :</label> <input type="number" id="radius"><br><br>
+    <button onclick="calArea()">show Area</button><br>
+    <h2 id="a3"><h2><br>
+        <hr>
+        <br>
+        <h3>Q4.Copy information of one object to another and log it to console.</h3><br><br>
+        <h3>open your console to see result!....</h3>
+        <button onclick="copyObject()">Copy</button><br><br>
+        <hr>
+        <br>
+        <h3>Q5.a create a list of objects of Employee with info as follow :<br>
+
+           b. Name, age, salary ,DOB<br>
+            
+           c. filter all employees with salary greater than 5000<br>
+            
+           d. group employee on the basis of their age<br>
+            
+           e. fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.<br></h3><br><br>
+           <h4> a.create a list of objects of Employee with info as follow :<br>
+           b. Name, age, salary ,DOB<br></h4>
+           <label>Employee Name:</label><br><input type="text" id="ename"><br>
+           <label>Employee  Age:</label><br><input type="number" id="eage"><br>
+           <label>Employee Salary:</label><br><input type="number" id="esalary"><br>
+           <label>DOB</label><br><input type="text" id="edob"><br>
+
+           <button onclick="Employee()">Add Employee</button><br><br>
+           <table id="table1">
+            <thead>
+                <th>Employee Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>DOB</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+    
+        </table>
+
+           <h4> c. filter all employees with salary greater than 5000<br></h4>
+           <button onclick="filterEmployee()">Filter</button><br><br>
+           <table id="table">
+            <thead>
+                <th>Employee Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>DOB</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+    
+        </table><br>
+        <hr>
+        <h4>d. group employee on the basis of their age .</h4><br>
+        <button onclick="groupBy()">Group</button><br><br>
+        <h3>open your console to see result!....</h3><br>
+        <hr>
+        <br>
+       <h4>e. fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.</h4><br>
+       <button onclick="fetchEMP()">Increment</button><br><br>
+       <table id="table2">
+        <thead>
+            <th>Employee Name</th>
+            <th>Age</th>
+            <th>Old Salary</th>
+            <th>Incremented Salary</th>
+            <th>DOB</th>
+        </thead>
+        <tbody>
+            
+        </tbody>
+
+    </table><br>
+    </div>
+</body> 
+
+</html>
