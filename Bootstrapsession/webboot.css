@@ -1,6 +1,19 @@
 body{
 }
+<<<<<<< Updated upstream
 
+=======
+.bg-side{
+		
+		  background-color: #383838;
+
+
+
+}
+.bg-dark {
+    background-color: #343a40;
+}
+>>>>>>> Stashed changes
 nav{
 	color:#fff;
 }
