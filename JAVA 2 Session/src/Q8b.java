@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Q8b {
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+
+
+        do
+        {
+            System.out.println("Enter the word");
+            String str = s.next();
+            if(str.equalsIgnoreCase("done"))
+                break;
+            else
+            {
+                if(str.charAt(0)==str.charAt(str.length()-1))
+                    System.out.println("The first Character is equal to last character");
+                else
+                    System.out.println("The first Character is not  equal to last character");
+
+            }
+        }while(true);
+        System.out.println("Out of loop");
+
+    }
+}
