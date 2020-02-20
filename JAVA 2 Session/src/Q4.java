@@ -1,5 +1,5 @@
 public class Q4
-{
+{	//WAP to create singleton class.
     public static final Q4 instance = new Q4();
     int i;
     private Q4()

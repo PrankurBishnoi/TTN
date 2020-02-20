@@ -1,5 +1,6 @@
-import java.util.Scanner;
+// Create a custom exception that do not have any stack trace.
 
+import java.util.Scanner;
 class AgeInvalidException extends Exception
 {
         public AgeInvalidException(String message)

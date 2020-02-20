@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// 7. WAP to convert seconds into days, hours, minutes and seconds.
 public class Q7 {
 
     static void ConvertSectoDay(int n)

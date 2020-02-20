@@ -1,4 +1,6 @@
 import java.util.Scanner;
+// 8. WAP to read words from the keyboard until the word done is entered. For each word except done, report whether its first character is equal   to  its last character. For the required loop, use a 
+// using while statement 
 
 public class Q8a
 {

@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+//6. WAP showing try, multi-catch and finally blocks.
 public class Q6
 {
 

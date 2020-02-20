@@ -1,4 +1,4 @@
-
+// 5. WAP to show object cloning in java using cloneable and copy constructor both.
 class Employee
 {
     String emp_name;

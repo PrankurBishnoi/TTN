@@ -1,6 +1,6 @@
 //Remove the Temp.class from the directory and then run the program....It will throw the NoClassdef found error
 public class Q2b
-{
+{	//WAP to produce NoClassDefFoundError
     public static void main(String[] args)
     {
         try {
