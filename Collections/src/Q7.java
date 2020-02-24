@@ -57,7 +57,7 @@ class Charfreq implements  Comparable
             else if((this.frequency-charfreq.frequency)<0)
                 return 1;
             else {
-                    return ((this.key).compareTo(charfreq.key));
+                    return (0);
                  }
 
     }
