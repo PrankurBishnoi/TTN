@@ -1,0 +1,84 @@
+
+buildscript {
+    dependencies {
+        classpath files  ("show-date/build/libs/show-date-1.0-SNAPSHOT.jar")
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'info.garagesalesapp.domain.SaleEvent'
+        )
+    }
+}
+
+sourceSets{
+    main {
+        java {
+            srcDirs =  ['src/main/*']
+        }
+    }
+}
+
+
+apply plugin : 'show-date-plugin'
+
+group 'com.tothenew'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile project(':json-display')
+
+//    compile 'com.google.code.gson:gson:2.8.0'
+}
+
+//apply plugin: 'project-report' //gradle htmlDependencyReport
+
+//class ShowDate extends DefaultTask {
+//    String dateMessage = "Date is: "
+//
+//    @TaskAction
+//    void showDate() {
+//        println dateMessage + new Date()
+//    }
+//}
+
+//task showDate(type: ShowDate)
+
+//task customShowDate(type: ShowDate) {
+//    dateMessage = "Custome time is: "
+//}
+
+//task showDate {
+//    dependsOn build
+//    group = 'my tasks'
+//    description = "Show current date"
+//    doLast {
+//        println ' '
+//        println 'Current date: ' + new Date()
+//    }
+//}
+
+
+//
+//taskChangeVersion wrapper(type: Wrapper) {
+//    gradleVersion = '4.8.1'
+//    distributionUrl = distributionUrl.replace("bin", "all")
+//
+//}
+
+wrapper {
+    gradleVersion = '4.8.1'
+}

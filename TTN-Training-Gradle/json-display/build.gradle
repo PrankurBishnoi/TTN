@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.tothenew'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12' // same as compile and runtime
+    testRuntime group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    compile 'com.google.code.gson:gson:2.8.0' // compile is a superset of runtime
+    runtime 'com.google.code.gson:gson:2.8.0' // runtime will be executed in compile time but not opposite
+}

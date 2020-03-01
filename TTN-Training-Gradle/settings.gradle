@@ -1,0 +1,5 @@
+rootProject.name = 'GradleSecond'
+include 'json-display'
+include 'show-date'
+include 'Ques5'
+
