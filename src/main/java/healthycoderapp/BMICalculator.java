@@ -28,7 +28,7 @@ public class BMICalculator {
 		return bmiScores;
 	}
 
-	private static double calculateBMI(Coder coder) {
+	public static double calculateBMI(Coder coder) {
 		double height = coder.getHeight();
 		double weight = coder.getWeight();
 		if (height == 0.0)

@@ -38,7 +38,7 @@ public class DietPlanner {
 		return (int) Math.round(bmr * carbohydratePercentage / 400.0);
 	}
 	
-	private int calculateBMR(Coder coder) {		
+	public int calculateBMR(Coder coder) {
 		if (coder.getGender() == Gender.MALE) {
 			return (int) Math.round(
 					(66.5 + 13.8 * coder.getWeight() 
