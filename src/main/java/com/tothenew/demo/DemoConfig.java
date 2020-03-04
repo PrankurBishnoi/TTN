@@ -12,7 +12,7 @@ public class DemoConfig
     {
         return new DemoService("Recliner");
     }
-
+//5) Demonstrating how you will resolve ambiguity while autowiring bean (Hint : @Primary)
     @Bean
     @Primary
     DemoService demoService2()

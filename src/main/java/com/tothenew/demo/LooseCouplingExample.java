@@ -10,6 +10,7 @@ public class LooseCouplingExample
 {
    private DemoService demos;
 
+  // (6) Performing Constructor Injection in a Spring Bean
    @Autowired
     public LooseCouplingExample(DemoService demos) {
         this.demos = demos;
