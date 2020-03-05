@@ -5,13 +5,25 @@
 //Employee Bean
 package com.tothenew.RestApp.Employee;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class Employee
 {
     static int  empcount;
+
+     @Size(min=1,max=10,message = "The employe id should be 1-10 characters long..")
        private String empid;
+
+        @Size(min=1,max=15,message = "The employee name  should be 1-10 characters long..")
         private String empname;
+
+
+        @Min(15)
+        @Max(65)
        private  double age;
 
     @Override
@@ -26,7 +38,8 @@ public class Employee
 
     private Date dob;
 
-    public Employee(String empid, String empname, double age, Date dob) {
+    public Employee(String empid, String empname, double age, Date dob)
+    {
         this.empid = empid;
         this.empname = empname;
         this.age = age;

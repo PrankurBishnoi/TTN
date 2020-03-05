@@ -17,10 +17,10 @@ public class EmployeeService
     public static List<Employee> list = new ArrayList<Employee>();
     static
     {
-        list.add(new Employee(String.valueOf(++(Employee.empcount)),"Shivam",21,new Date()));
-        list.add(new Employee(String.valueOf(++(Employee.empcount)),"Devansh",18,new Date()));
-        list.add(new Employee(String.valueOf(++(Employee.empcount)),"Pihu",16,new Date()));
-        list.add(new Employee(String.valueOf(++(Employee.empcount)),"Sam",15,new Date()));
+        list.add(new Employee(String.valueOf(++(Employee.empcount)),"Shivam",21.0,new Date()));
+        list.add(new Employee(String.valueOf(++(Employee.empcount)),"Devansh",18.0,new Date()));
+        list.add(new Employee(String.valueOf(++(Employee.empcount)),"Pihu",16.0,new Date()));
+        list.add(new Employee(String.valueOf(++(Employee.empcount)),"Sam",15.0,new Date()));
     }
 
     public  List<Employee> retAllEmployees()
@@ -57,6 +57,16 @@ public class EmployeeService
             }
         }
             return null;
+    }
+    public Employee updateEmp(String id,Employee emp)
+    {
+        Employee temp = returnEmployeeById(id);
+        if(temp==null)
+            return null;
+        temp.setAge(emp.getAge());
+        temp.setEmpname(emp.getEmpname());
+
+        return temp;
     }
 
 }
