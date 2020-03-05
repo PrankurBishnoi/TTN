@@ -28,7 +28,9 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
+	
+	// Q10. Configure actuator in your project to check the health of application
+	// and get the information about various beans configured in your application
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.2.5.RELEASE'
 
 

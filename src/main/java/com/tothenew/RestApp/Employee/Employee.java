@@ -3,12 +3,11 @@
 // service to  perform different operations related to employee
 
 //Employee Bean
+
+//Q9. Apply validation while create a new employee using POST http Request.
 package com.tothenew.RestApp.Employee;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.Date;
 
 public class Employee
@@ -22,8 +21,8 @@ public class Employee
         private String empname;
 
 
-        @Min(15)
-        @Max(65)
+        @Min(value = 15,message = "Minimum age of employee must be 15")
+        @Max(value = 65,message = "Maximum age of employee must be 65")
        private  double age;
 
     @Override
@@ -35,7 +34,7 @@ public class Employee
                 ", dob=" + dob +
                 '}';
     }
-
+    @Past(message = "DOB can't be in present")
     private Date dob;
 
     public Employee(String empid, String empname, double age, Date dob)
