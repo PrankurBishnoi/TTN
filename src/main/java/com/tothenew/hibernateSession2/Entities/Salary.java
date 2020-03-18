@@ -3,52 +3,52 @@ package com.tothenew.hibernateSession2.Entities;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class EmpSalary
+public class Salary
 {
-    private Double basicsalary;
-    private Double bonussalary;
-    private Double taxamount;
-    private Double specialallowanxesalary;
+    private java.lang.Double basicsalary;
+    private java.lang.Double bonussalary;
+    private java.lang.Double taxamount;
+    private java.lang.Double specialallowanxesalary;
 
-    public EmpSalary() {
+    public Salary() {
     }
 
-    public EmpSalary(Double basicsalary, Double bonussalary, Double taxamount, Double specialallowanxesalary) {
+    public Salary(java.lang.Double basicsalary, java.lang.Double bonussalary, java.lang.Double taxamount, java.lang.Double specialallowanxesalary) {
         this.basicsalary = basicsalary;
         this.bonussalary = bonussalary;
         this.taxamount = taxamount;
         this.specialallowanxesalary = specialallowanxesalary;
     }
 
-    public Double getBasicsalary() {
+    public java.lang.Double getBasicsalary() {
         return basicsalary;
     }
 
-    public void setBasicsalary(Double basicsalary) {
+    public void setBasicsalary(java.lang.Double basicsalary) {
         this.basicsalary = basicsalary;
     }
 
-    public Double getBonussalary() {
+    public java.lang.Double getBonussalary() {
         return bonussalary;
     }
 
-    public void setBonussalary(Double bonussalary) {
+    public void setBonussalary(java.lang.Double bonussalary) {
         this.bonussalary = bonussalary;
     }
 
-    public Double getTaxamount() {
+    public java.lang.Double getTaxamount() {
         return taxamount;
     }
 
-    public void setTaxamount(Double taxamount) {
+    public void setTaxamount(java.lang.Double taxamount) {
         this.taxamount = taxamount;
     }
 
-    public Double getSpecialallowanxesalary() {
+    public java.lang.Double getSpecialallowanxesalary() {
         return specialallowanxesalary;
     }
 
-    public void setSpecialallowanxesalary(Double specialallowanxesalary) {
+    public void setSpecialallowanxesalary(java.lang.Double specialallowanxesalary) {
         this.specialallowanxesalary = specialallowanxesalary;
     }
 

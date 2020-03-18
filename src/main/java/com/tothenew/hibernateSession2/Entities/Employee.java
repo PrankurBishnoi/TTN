@@ -2,69 +2,74 @@ package com.tothenew.hibernateSession2.Entities;
 
 import javax.persistence.*;
 
-@Entity
 
-@Inheritance(strategy = InheritanceType.JOINED)
+
+//@Inheritance(strategy = InheritanceType.JOINED)
 //@DiscriminatorColumn(name="emptype")
+@Entity
 public class Employee
 {
     public Employee() {
     }
 
     @Id
+    @Column(name = "empId")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private  String firstname;
-    private String lastname;
-    private Integer age;
-    @Embedded
-    private  EmpSalary salary;
+    @Column(name = "empFirstName")
+    private  String firstName;
+    @Column(name = "empLastName")
+    private String lastName;
+    @Column(name = "empAge")
+    private java.lang.Integer age;
+    @Column(name = "empSalary")
+    private Double salary;
 
-    public Employee( String firstname, String lastname, Integer age, EmpSalary salary) {
+    public Employee(String firstName, String lastName, java.lang.Integer age, Double salary) {
      //   this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
         this.salary = salary;
     }
 
-    public Long getId() {
+    public java.lang.Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(java.lang.Long id) {
         this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public Integer getAge() {
+    public java.lang.Integer getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(java.lang.Integer age) {
         this.age = age;
     }
 
-    public EmpSalary getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(EmpSalary salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
 
@@ -73,8 +78,8 @@ public class Employee
     {
         return "Employee{" +
                 "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", firstname='" + firstName + '\'' +
+                ", lastname='" + lastName + '\'' +
                 ", age=" + age +
                 ", salary=" + salary +
                 '}';

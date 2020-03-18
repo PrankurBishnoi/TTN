@@ -11,15 +11,27 @@ import java.util.List;
 
 public interface EmployeeRepository extends CrudRepository<Employee,Long>
 {
-//    @Query("select firstname,lastname from Employee e where e.salary>(select avg(salary) from Employee) order by e.age asc, e.salary desc")
+//    @Query("select firstName,lastName from Employee e where e.salary>(select avg(salary) from Employee) order by e.age asc, e.salary desc")
 //    List<Object[]> findEmployees();
 //
-//
-////    @Modifying
-////    @Query("update Employee e set e.salary=:Salary where e.salary IN(select salary from (select salary from Employee) temp)")
-////    void updateEmployees(@Param("Salary") Double Salary);
-//
-//
+
+    @Transactional
+   @Modifying
+    @Query("update Employee e set e.salary=:Salary where e.salary <:AvgSalary")
+    void updateEmployees(@Param("Salary") Double Salary,@Param("AvgSalary") Double avgsalary);
+
+      @Query("Select avg(salary) from Employee")
+      Double averageSalary();
+
+
+      @Query("Select min(salary) from Employee")
+      Double minSalary();
+
+
+    @Transactional
+    @Modifying
+    @Query("delete from Employee e  where e.salary =:MinSalary")
+    void deleteEmployees(@Param("MinSalary") Double minsalary);
 //    @Query(value = "select id,firstname,age from employee where lastname like '%singh'",nativeQuery = true)
 //    List<Object[]> findEmployessEndingWithSingh();
 //
@@ -28,6 +40,11 @@ public interface EmployeeRepository extends CrudRepository<Employee,Long>
 //    @Query(value = "delete from employee where age>45",nativeQuery = true)
 //    void deleteEmployeesWithAgeGreaterThan45();
 
+
+    @Transactional
+    @Modifying
+    @Query("delete from Employee where salary = (Select min(e.salary) from Employee e)")
+    void deleteEmployee();
 
 
 
