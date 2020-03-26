@@ -14,7 +14,7 @@ public class HibernateSession2Application {
 
 		EmployeeService employeeService = applicationContext.getBean(EmployeeService.class);
 
-//	employeeService.saveEmployee();
+	employeeService.saveEmployee();
 //
 //		employeeService.Q1();
 //		employeeService.Q4();
@@ -23,7 +23,7 @@ public class HibernateSession2Application {
 //		employeeService.Q9();
 	//	employeeService.Q2();
 		//
-		employeeService.Q3();
+//		employeeService.Q3();
 	}
 
 }

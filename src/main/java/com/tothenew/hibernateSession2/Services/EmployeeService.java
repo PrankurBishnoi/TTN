@@ -3,6 +3,7 @@ package com.tothenew.hibernateSession2.Services;
 import com.tothenew.hibernateSession2.Entities.Employee;
 //import com.tothenew.hibernateSession2.Entities.RegularEmployee;
 //import com.tothenew.hibernateSession2.Entities.TraineeEmployee;
+import com.tothenew.hibernateSession2.Entities.Salary;
 import com.tothenew.hibernateSession2.Repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,10 +17,10 @@ public class EmployeeService
 
     public void saveEmployee()
     {
-        Employee emp = new Employee("Shivam","Agarwal",21,60000.0);
+        Employee emp = new Employee("Shivam","Agarwal",21,new Salary(40000.0,3000.0,4000.0,3000.0));
 
        repository.save(emp);
-      repository.save(new Employee("Devansh","Agarwal",18,80000.0));
+      repository.save(new Employee("Devansh","Agarwal",18,new Salary(40000.0,3000.0,4000.0,3000.0)));
 //        repository.save(new Employee("Pihu","Agarwal",19,89000d));
 //        repository.save(new Employee("Tom","Hanks",54,80000d));
 //        repository.save(new Employee("Tom","Cruise",45,60000d));
@@ -39,33 +40,33 @@ public class EmployeeService
 //       }
 //    }
 
-
-    public void Q2()
-    {
-        System.out.println("Employees before updating BBBBBBBBBBBBB : ");
-        repository.findAll().forEach(System.out::println);
-
-        Double avgsalary = repository.averageSalary();
-        repository.updateEmployees(100000.0,avgsalary);
-
-        System.out.println("Employees After updating AAAAAAAAAAAAAAA : ");
-        repository.findAll().forEach(System.out::println);
-    }
-    public void Q3()
-    {
-        System.out.println("Deleting all empployees with minimum salary:");
-
-        System.out.println("Employees before deleting BBBBBBBBBBBBB : ");
-        repository.findAll().forEach(System.out::println);
-
-        Double minsalary = repository.minSalary();
-
-        System.out.println("Minimum Salary is : "+ minsalary);
-        repository.deleteEmployees(minsalary);
-
-        System.out.println("Employees Afterdeleting AAAAAAAAAAAAAAA : ");
-        repository.findAll().forEach(System.out::println);
-    }
+//
+//    public void Q2()
+//    {
+//        System.out.println("Employees before updating BBBBBBBBBBBBB : ");
+//        repository.findAll().forEach(System.out::println);
+//
+//        Double avgsalary = repository.averageSalary();
+//        repository.updateEmployees(100000.0,avgsalary);
+//
+//        System.out.println("Employees After updating AAAAAAAAAAAAAAA : ");
+//        repository.findAll().forEach(System.out::println);
+//    }
+//    public void Q3()
+//    {
+//        System.out.println("Deleting all empployees with minimum salary:");
+//
+//        System.out.println("Employees before deleting BBBBBBBBBBBBB : ");
+//        repository.findAll().forEach(System.out::println);
+//
+//        Double minsalary = repository.minSalary();
+//
+//        System.out.println("Minimum Salary is : "+ minsalary);
+//        repository.deleteEmployees(minsalary);
+//
+//        System.out.println("Employees Afterdeleting AAAAAAAAAAAAAAA : ");
+//        repository.findAll().forEach(System.out::println);
+//    }
 
 //
 //   public  void Q4()
@@ -122,9 +123,9 @@ public class EmployeeService
 //
 //
 //    }
-    public void deleteEmp()
-    {
-        repository.deleteEmployee();
-    }
+//    public void deleteEmp()
+//    {
+//        repository.deleteEmployee();
+//    }
 
 }

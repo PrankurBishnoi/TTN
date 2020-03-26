@@ -23,9 +23,10 @@ public class Employee
     @Column(name = "empAge")
     private java.lang.Integer age;
     @Column(name = "empSalary")
-    private Double salary;
+    @Embedded
+    private Salary salary;
 
-    public Employee(String firstName, String lastName, java.lang.Integer age, Double salary) {
+    public Employee(String firstName, String lastName, java.lang.Integer age, Salary salary) {
      //   this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,11 +66,11 @@ public class Employee
         this.age = age;
     }
 
-    public Double getSalary() {
+    public Salary getSalary() {
         return salary;
     }
 
-    public void setSalary(Double salary) {
+    public void setSalary(Salary salary) {
         this.salary = salary;
     }
 
